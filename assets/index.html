@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+  <script>
+    const nativeCommunicator = typeof webkit !== 'undefined' ? webkit.messageHandlers.native : window.native;
+    function test() {
+      const text = "Hello from WebView!!!";
+nativeCommunicator.postMessage(text);
+      // var s = text + "123";
+      // console.log(s);
+      // nativeCommunicator.postMessage(s);
+    }
+  </script>
+</body>
+</html>
